@@ -11,10 +11,12 @@ const database = mongoose.connect(
     },
     (error) => {
         if (!error){
-            console.log("Connected to mongoDB");
+            console.log("Connected to mongoDB!");
         }
         else {
             console.log("Connection to mongoDB failed \n" + error);
         }
     }
 )
+
+module.exports = database;

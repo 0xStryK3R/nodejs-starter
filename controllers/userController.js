@@ -6,6 +6,7 @@ exports.signUp = async(req, res, next) => {
         const savedUser = await User.create(newUser);
         return res.status(200).send({message: "User created Successfully", user: savedUser});
     } catch (err) {
+        console.log(err);
         return res.status(400).send({message: "Unable to create user", error: err});
     }
 };
